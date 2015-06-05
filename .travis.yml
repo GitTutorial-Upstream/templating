@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+- '0.12'
+before_install:
+- npm install -g gulp
+- npm install -g jspm
+- jspm config registries.github.auth $GH_TOKEN
+before_script:
+- jspm install
+script:
+- gulp test-ci
+notifications:
+  webhooks:
+    urls:
+    - https://webhooks.gitter.im/e/a6356de6d62829ab719a
+addons:
+  sauce_connect: true
