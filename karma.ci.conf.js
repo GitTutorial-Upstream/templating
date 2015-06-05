@@ -18,12 +18,16 @@ module.exports = function(config) {
 
   // Browsers to run on Sauce Labs
   var customLaunchers = {
-    "SL_Android_4.0": {
-      base: "SauceLabs",
-      browserName: "Android",
-      platform: "Linux",
-      version: "4.0"
-    },
+     'SL_Chrome': {
+       base: 'SauceLabs',
+       browserName: 'chrome'
+     },
+    // "SL_Android_4.0": {
+    //   base: "SauceLabs",
+    //   browserName: "Android",
+    //   platform: "Linux",
+    //   version: "4.0"
+    // },
     // "SL_Android_4.1": {
     //   base: "SauceLabs",
     //   browserName: "Android",
